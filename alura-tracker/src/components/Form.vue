@@ -9,6 +9,7 @@
                 >
             </div>
             <div class="column">
+                <div class="is-flex is-align-items-center is-justify-content-space-between">
                 <section>
                     <strong>00:00:00</strong>
                 </section>
@@ -25,16 +26,20 @@
                     <span>stop</span>
                 </button>
 
+                </div>
+               
+
             </div>
        
         </div>
    </div>
 
 </template>
-<script ls="ts">
+<script lang="ts">
 import { defineComponent } from "vue";
 export default defineComponent({
     name: "FormuLario",
+
 })
 
 
