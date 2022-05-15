@@ -6,12 +6,11 @@
                 type="text" 
                 class="input" 
                 placeholder="Digite aqui a tarefa que você deseja iniciar"
+                v-model="descrição"
                 >
             </div>
             <div class="column">
-               <TempoRizador/>
-               
-
+               <TempoRizador @aoTemporizadorFinalizado="FinalizarTarefa"/>
             </div>
        
         </div>
@@ -27,6 +26,18 @@ import TempoRizador from './Temporizador.vue'
      components: {
         TempoRizador,
         },
+    data(){
+        return{
+            descrição:'',
+        }
+    },
+    methods: {
+    FinalizarTarefa (tempoDecorrido:number) : void {
+     console.log("tempo da tarefa", tempoDecorrido)
+     console.log("nome da tarefa", this.descrição)
+     this.descrição = '';
+    }
+    }
  })
 
 </script>
