@@ -18,9 +18,10 @@
 <style scoped>
  header{
      padding:1rem;
-     background: #0d3b66;
+     background: #fcc34e;
      width: 100%;
      height:100vh;
+     text-align: center;
  }
 
  @media only screen and (max-width:768px){
