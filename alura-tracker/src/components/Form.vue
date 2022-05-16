@@ -31,10 +31,11 @@ import TempoRizador from './Temporizador.vue'
             descrição:'',
         }
     },
+    emits:['aoSalvarTarefa'],
     methods: {
     FinalizarTarefa (tempoDecorrido:number) : void {
-     console.log("tempo da tarefa", tempoDecorrido)
-     console.log("nome da tarefa", this.descrição)
+     this.$emit('aoSalvarTarefa',{  duracaoEmSegundos:tempoDecorrido,
+     descrição:this.descrição})
      this.descrição = '';
     }
     }
