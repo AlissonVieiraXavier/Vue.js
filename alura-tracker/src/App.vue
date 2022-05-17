@@ -7,7 +7,7 @@
        <FormuLario @aoSalvarTarefa="SalvaTarefa"/>
       </div>
       <div class="lista">
-        <TarefA v-for="(tarefa,index) in tarefas" :key="index"/>
+        <TarefA v-for="(tarefa,index) in tarefas" :key="index" :tarefa="tarefa"/>
       </div>
     </main>
 </template>
