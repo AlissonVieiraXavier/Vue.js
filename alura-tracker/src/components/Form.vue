@@ -6,7 +6,7 @@
                 type="text" 
                 class="input" 
                 placeholder="Digite aqui a tarefa que você deseja iniciar"
-                v-model="descrição"
+                v-model="descricao"
                 >
             </div>
             <div class="column">
@@ -28,15 +28,15 @@ import TempoRizador from './Temporizador.vue'
         },
     data(){
         return{
-            descrição:'',
+            descricao:'',
         }
     },
     emits:['aoSalvarTarefa'],
     methods: {
     FinalizarTarefa (tempoDecorrido:number) : void {
      this.$emit('aoSalvarTarefa',{  duracaoEmSegundos:tempoDecorrido,
-     descrição:this.descrição})
-     this.descrição = '';
+     descricao:this.descricao})
+     this.descricao = '';
     }
     }
  })
